@@ -15,7 +15,5 @@ attractions:
         'attraction 2',
         'attraction 3',
     ]
-
-```
-
 }
+```
