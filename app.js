@@ -3,11 +3,11 @@
 /* Get DOM Elements */
 //city name
 const nameInput = document.getElementById('name-input');
-const cityName = document.getAnimations('city-name');
+const cityName = document.getElementById('city-name');
 
 //climate selection
 const climateSelect = document.getElementById('climate-select');
-const climageImg = document.getElementById('climate-img');
+const climateImg = document.getElementById('climate-img');
 
 // architecture selection
 const archSelect = document.getElementById('arch-select');
@@ -26,10 +26,19 @@ const city = {
 };
 
 /* Events */
-nameInput.addEventListener('keydown', () => {
+nameInput.addEventListener('input', () => {
     city.name = nameInput.value;
+    displayCity();
 });
 
+climateSelect.addEventListener('change', () => {});
+
 /* Display Functions */
+function displayCity() {
+    cityName.textContent = city.name;
+    climateImg.src = '/assets/city-design/' + city.climate + '-climate.jpg';
+    archImg.src = '/assets/city-design/' + city.architecture + '-architecture.jpg';
+}
 
 // (don't forget to call any display functions you want to run on page load!)
+displayCity();
