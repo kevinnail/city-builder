@@ -3,16 +3,29 @@ main {
     grid-template-columns: 250px 300px;
     gap: 30px;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    border: 2px solid black;
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    background-color: rgb(109, 109, 179);
 }
 
 .data-entry {
     display: grid;
     gap: 20px;
+    border: 2px solid black;
+    padding: 20px;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(94, 179, 254);
 }
 
 label {
-    display: grid;
+    /* display: grid; */
+    display: flex;
+    flex-direction: column;
 }
 
 .add-attractions-div {
@@ -32,7 +45,10 @@ h3 {
 img {
     width: 60%;
 }
-
+article {
+    border-radius: 10px;
+    border: 2px solid black;
+}
 .desert {
     background-color: rgb(104, 85, 0);
     padding: 20px;
@@ -41,12 +57,12 @@ img {
 .coastal {
     background-color: rgb(0, 0, 255);
     padding: 20px;
-    color: white;
+    color: rgb(159, 163, 250);
 }
 .pnw {
     background-color: rgba(0, 255, 153, 0.525);
     padding: 20px;
-    color: rgb(42, 134, 165);
+    color: rgb(25, 76, 93);
 }
 .polar {
     background-color: rgb(81, 81, 255);
