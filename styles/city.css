@@ -20,6 +20,10 @@ label {
     grid-template-columns: 1fr max-content;
 }
 
+h1 {
+    text-align: center;
+}
+
 h1,
 h3 {
     margin: 0px;
