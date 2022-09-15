@@ -9,6 +9,7 @@ main {
     height: 100%;
     margin: auto;
     background-color: rgb(109, 109, 179);
+    min-width: 750px;
 }
 
 .data-entry {
