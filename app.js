@@ -31,7 +31,14 @@ nameInput.addEventListener('input', () => {
     displayCity();
 });
 
-climateSelect.addEventListener('change', () => {});
+climateSelect.addEventListener('change', () => {
+    city.climate = climateSelect.value;
+    displayCity();
+});
+archSelect.addEventListener('change', () => {
+    city.architecture = archSelect.value;
+    displayCity();
+});
 
 /* Display Functions */
 function displayCity() {
