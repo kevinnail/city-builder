@@ -1,39 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Web App</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Niconne&display=swap"
+            rel="stylesheet"
+        />
+        <!-- css -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <link rel="stylesheet" href="styles/city.css" />
+        <!-- add link for page specific css -->
+    </head>
 
-    <!-- fonts -->
-    <!-- see https://fonts.google.com/ -->
+    <body>
+        <header>
+            <img class="logo" src="assets/html_css_js.png" alt="logo" />
+            <h1>Web App</h1>
+        </header>
 
-    <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
+        <main>
+            <section class="data-entry">
+                <label>
+                    Name of city
+                    <input id="name-input" value="" />
+                </label>
+                <label>
+                    Climate
+                    <select id="climate-select">
+                        <option value="desert">Desert</option>
+                        <option value="coastal">Coastal</option>
+                        <option value="pnw">Pacific Northwest</option>
+                        <option value="polar">Polar</option>
+                    </select>
+                </label>
+                <label>
+                    Architecture
+                    <select id="arch-select">
+                        <option value="high-tech">High Tech</option>
+                        <option value="islamic">Islamic</option>
+                        <option value="sustainable">Sustainable</option>
+                        <option value="byzantine">Byzantine</option>
+                    </select>
+                </label>
+                <label>
+                    Attractions
+                    <div class="add-attractions-div">
+                        <input id="attractions-input" />
+                        <button id="add-attractions">+</button>
+                    </div>
+                </label>
+            </section>
+            <article id="city-design" class="polar byzantine">
+                <h1 id="city-name">Sirius</h1>
+                <h3>Climate</h3>
 
-</head>
+                <img id="climate-img" width="250px" src="/assets/city-design/coastal-climate.jpg" />
 
-<body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
-
-    <main>
-
-    </main>
-
-</body>
-
+                <h3>Architecture style</h3>
+                <img
+                    id="arch-img"
+                    width="250px"
+                    src="/assets/city-design/byzantine-architecture.jpg"
+                />
+                <h3>Attractions</h3>
+                <ul id="attraction-list"></ul>
+            </article>
+        </main>
+    </body>
 </html>
