@@ -18,6 +18,9 @@ const attractionInput = document.getElementById('attractions-input');
 const addBtn = document.getElementById('add-attractions');
 const attractionList = document.getElementById('attraction-list');
 
+// for changing classes
+const cityClass = document.getElementById('city-design');
+
 /* State */
 const city = {
     name: 'Oceantown',
@@ -52,6 +55,8 @@ addBtn.addEventListener('click', () => {
 
 /* Display Functions */
 function displayCity() {
+    cityClass.classList = '';
+    cityClass.classList.add(city.climate, city.architecture);
     cityName.textContent = city.name;
     climateImg.src = '/assets/city-design/' + city.climate + '-climate.jpg';
     archImg.src = '/assets/city-design/' + city.architecture + '-architecture.jpg';
