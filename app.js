@@ -47,5 +47,11 @@ function displayCity() {
     archImg.src = '/assets/city-design/' + city.architecture + '-architecture.jpg';
 }
 
+function displayInputs() {
+    nameInput.value = city.name;
+    climateSelect.value = city.climate;
+    archSelect.value = city.architecture;
+}
 // (don't forget to call any display functions you want to run on page load!)
 displayCity();
+displayInputs();
