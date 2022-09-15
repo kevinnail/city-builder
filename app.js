@@ -23,7 +23,7 @@ const city = {
     name: 'Oceantown',
     climate: 'coastal',
     architecture: 'islamic',
-    attractions: [],
+    attractions: ['Coastal beaches', 'Sand dunes', 'Forests and mountains'],
 };
 
 /* Events */
@@ -43,10 +43,11 @@ archSelect.addEventListener('change', () => {
 
 addBtn.addEventListener('click', () => {
     const attraction = attractionInput.value;
-    city.attractions.push(attraction);
-    displayAttractions();
-    console.log(attraction);
-    console.log('hi');
+    if (attraction !== '') {
+        city.attractions.push(attraction);
+        displayAttractions();
+        attractionInput.value = '';
+    }
 });
 
 /* Display Functions */
@@ -63,12 +64,15 @@ function displayInputs() {
 }
 
 function displayAttractions() {
-    const li = document.createElement('li');
-    li.textContent = attractionInput.value;
-    attractionList.append(li);
-    attractionInput.value = '';
+    attractionList.innerHTML = '';
+    for (const attraction of city.attractions) {
+        const li = document.createElement('li');
+        li.textContent = attraction;
+        attractionList.append(li);
+    }
 }
 
 // (don't forget to call any display functions you want to run on page load!)
 displayCity();
 displayInputs();
+displayAttractions();
