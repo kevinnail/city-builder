@@ -19,7 +19,7 @@
         <!-- css -->
         <link rel="stylesheet" href="styles/reset.css" />
         <link rel="stylesheet" href="styles/global.css" />
-
+        <link rel="stylesheet" href="styles/city.css" />
         <!-- add link for page specific css -->
     </head>
 
@@ -30,7 +30,7 @@
         </header>
 
         <main>
-            <section>
+            <section class="data-entry">
                 <label>
                     Name of city
                     <input id="name-input" value="enter city name" />
@@ -55,19 +55,19 @@
                 </label>
                 <label>
                     Attractions
-                    <div>
-                        <input id="attractions-input" />
+                    <div class="add-attractions-div">
+                        <input id="attractions-input" style="width=100%" />
                         <button id="add-attractions">+</button>
                     </div>
                 </label>
             </section>
-            <article id="city-design" class="">
+            <article id="city-design" class="city-display">
                 <h1>Sirius</h1>
-                <h2>Climate</h2>
+                <h3>Climate</h3>
                 <img id="" width="250px" src="/assets/city-design/coastal-climate.jpg" />
-                <h2>Architecture style</h2>
+                <h3>Architecture style</h3>
                 <img id="" width="250px" src="/assets/city-design/byzantine-architecture.jpg" />
-                <h2>Attractions</h2>
+                <h3>Attractions</h3>
                 <ul>
                     <li>Coastal beaches</li>
                     <li>Sand Dunes</li>

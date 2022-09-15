@@ -1,0 +1,35 @@
+main {
+    display: grid;
+    grid-template-columns: 250px 300px;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.data-entry {
+    display: grid;
+    gap: 20px;
+}
+
+label {
+    display: grid;
+}
+
+.add-attractions-div {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+}
+
+h1,
+h3 {
+    margin: 0px;
+}
+
+.city-display {
+    background-color: rgb(138, 138, 255);
+    padding: 20px;
+}
+
+img {
+    width: 60%;
+}
