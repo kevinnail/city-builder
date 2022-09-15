@@ -15,7 +15,8 @@ const archImg = document.getElementById('arch-img');
 
 // add attractions
 const attractionInput = document.getElementById('attractions-input');
-const addBtn = document.getElementById('attractions-input');
+const addBtn = document.getElementById('add-attractions');
+const attractionList = document.getElementById('attraction-list');
 
 /* State */
 const city = {
@@ -40,6 +41,14 @@ archSelect.addEventListener('change', () => {
     displayCity();
 });
 
+addBtn.addEventListener('click', () => {
+    const attraction = attractionInput.value;
+    city.attractions.push(attraction);
+    displayAttractions();
+    console.log(attraction);
+    console.log('hi');
+});
+
 /* Display Functions */
 function displayCity() {
     cityName.textContent = city.name;
@@ -52,6 +61,14 @@ function displayInputs() {
     climateSelect.value = city.climate;
     archSelect.value = city.architecture;
 }
+
+function displayAttractions() {
+    const li = document.createElement('li');
+    li.textContent = attractionInput.value;
+    attractionList.append(li);
+    attractionInput.value = '';
+}
+
 // (don't forget to call any display functions you want to run on page load!)
 displayCity();
 displayInputs();
